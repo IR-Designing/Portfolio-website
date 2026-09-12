@@ -1,58 +1,58 @@
 let words = document.querySelectorAll(".word");
-words.forEach((word)=>{
+words.forEach((word) => {
     let letters = word.textContent.split("");
-    word.textContent="";
-    letters.forEach((letter)=>{
-        let span =document.createElement("span");
+    word.textContent = "";
+    letters.forEach((letter) => {
+        let span = document.createElement("span");
         span.textContent = letter;
         span.className = "letter";
-        word.append(span); 
+        word.append(span);
     });
 });
 
 let currentWordIndex = 0;
-let maxWordIndex = words.length -1;
+let maxWordIndex = words.length - 1;
 words[currentWordIndex].style.opacity = "1";
 
-let changeText =()=>{
+let changeText = () => {
     let currentWord = words[currentWordIndex];
     let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
 
 
-    Array.from(currentWord.children).forEach((letter,i)=>{
-        setTimeout(()=>{
+    Array.from(currentWord.children).forEach((letter, i) => {
+        setTimeout(() => {
             letter.className = "letter out";
         }, i * 80);
     });
-    nextWord.style.opacity="1";
-    Array.from(nextWord.children).forEach((letter,i)=>{
+    nextWord.style.opacity = "1";
+    Array.from(nextWord.children).forEach((letter, i) => {
         letter.className = "letter behind";
-        setTimeout(()=>{
+        setTimeout(() => {
             letter.className = "letter in";
-        },340 + i * 80);
+        }, 340 + i * 80);
     });
-    currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;   
+    currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
 };
 changeText();
-setInterval(changeText,2000)
+setInterval(changeText, 2000)
 
 // circle.skills--------------------------------------------------------->
 const circle = document.querySelectorAll(".circle");
-circle.forEach(elem=>{
+circle.forEach(elem => {
     var dots = elem.getAttribute("data-dots");
     var marked = elem.getAttribute("data-percent");
-    var percent = Math.floor(dots*marked/100);
+    var percent = Math.floor(dots * marked / 100);
     var points = "";
     var rotate = 360 / dots;
 
 
-    for(let i = 0; i < dots ; i++){
+    for (let i = 0; i < dots; i++) {
         points += `<div class="points" style="--i:${i}; --rot:${rotate}deg" style="--i:1;"></div>`
     }
     elem.innerHTML = points;
 
     const pointsMarked = elem.querySelectorAll(".points");
-    for(let i = 0; i < percent; i++){
+    for (let i = 0; i < percent; i++) {
         pointsMarked[i].classList.add("marked")
     }
 })
@@ -127,19 +127,19 @@ let menuLi = document.querySelectorAll('header ul li a');
 let section = document.querySelectorAll('section');
 
 
-function activeMenu(){
-  let len = section.length;
-  while(--len && window.scrollY + 97 < section[len].offsetTop){}
-  menuLi.forEach(sec => sec.classList.remove("active"));
-  menuLi[len].classList.add("active");
+function activeMenu() {
+    let len = section.length;
+    while (--len && window.scrollY + 97 < section[len].offsetTop) { }
+    menuLi.forEach(sec => sec.classList.remove("active"));
+    menuLi[len].classList.add("active");
 }
 activeMenu()
-window.addEventListener("scroll",activeMenu);
+window.addEventListener("scroll", activeMenu);
 
 // Stckey navbar--------------------------------------------------------->
 const header = document.querySelector("header");
-window.addEventListener("scroll",function(){
-  header.classList.toggle("sticky",window.scrollY > 50)
+window.addEventListener("scroll", function () {
+    header.classList.toggle("sticky", window.scrollY > 50)
 })
 
 // toggle icon navbar--------------------------------------------------------->
@@ -148,32 +148,32 @@ let menuIcon = document.querySelector("#menu-icon");
 let navList = document.querySelector(".navlist");
 
 
-menuIcon.onclick = ()=>{
-  menuIcon.classList.toggle("bx-x");
-  navList.classList.toggle("open");
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle("bx-x");
+    navList.classList.toggle("open");
 }
 
 window.onscroll = () => {
     menuIcon.classList.remove("bx-x"); // Remove close button class
     navList.classList.remove("open"); // Remove open class for the navigation list
-  };
+};
 
 
-  //about section--------------------------------------------------------->
+//about section--------------------------------------------------------->
 
-    const aboutButton = document.querySelector(".about-read-more");
-    const aboutContent = document.querySelector(".about-content");
+const aboutButton = document.querySelector(".about-read-more");
+const aboutContent = document.querySelector(".about-content");
 
-    aboutButton.addEventListener("click", () => {
-        aboutContent.classList.toggle("active");
+aboutButton.addEventListener("click", () => {
+    aboutContent.classList.toggle("active");
 
-        aboutButton.textContent = aboutContent.classList.contains("active")
-            ? "Read Less"
-            : "Read More";
-    });
+    aboutButton.textContent = aboutContent.classList.contains("active")
+        ? "Read Less"
+        : "Read More";
+});
 
 
-  //Services Section-------------------------------------------------------------->
+//Services Section-------------------------------------------------------------->
 document.addEventListener("DOMContentLoaded", function () {
 
     const skillsSection = document.querySelector("#skills");
@@ -187,22 +187,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const circles = skillsSection.querySelectorAll(".circle");
 
 
-// Read More / Read Less functionality============================================>
+    // Read More / Read Less functionality============================================>
 
-  
-  const readMoreButtons = document.querySelectorAll(".read-more-btn");
 
-  readMoreButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const serviceBox = button.closest(".service-box");
+    const readMoreButtons = document.querySelectorAll(".read-more-btn");
 
-      serviceBox.classList.toggle("active");
+    readMoreButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const serviceBox = button.closest(".service-box");
 
-      button.textContent = serviceBox.classList.contains("active")
-        ? "Read Less"
-        : "Read More";
+            serviceBox.classList.toggle("active");
+
+            button.textContent = serviceBox.classList.contains("active")
+                ? "Read Less"
+                : "Read More";
+        });
     });
-  });
 
 
 
