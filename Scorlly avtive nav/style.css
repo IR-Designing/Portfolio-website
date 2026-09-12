@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "neoneon";
+  src: url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.ttf) format('truetype'), /* ../../<repo-name>Fonts/<font-name>.<format> is for using custom fonts on github*/
+  url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.eot) format('embedded-opentype'), url(./Assets/Fonts/Neoneon/Neoneon.woff) format('woff'), /* ../Fonts/<font-name>.<format> is for using locally and on live server */
+  url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.svg) format('svg'), url(../personal-portfolio/Assets/Fonts/Neoneon/Neoneon.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(225, 0, 225, 0.469);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(225, 0, 225);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px #88888853;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+}
+
+.nav-container {
+  float: right;
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-container a {
+  padding: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-container .active {
+  background-color: rgba(225, 0, 225, 0.469);
+}
+
+.nav-container a:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.265);
+}
+
+#brief {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 140px 0 140px;
+  background-image: url('./Assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#brief-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#brief-container .brief-pic {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+#brief-container img {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 150px;
+}
+
+#brief-container .brief-text {
+  background-color: white;
+  gap: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: -70px;
+  padding: 90px 30px 40px;
+}
+
+#brief-container .brief-name {
+  font-family: neoneon;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#brief-container .brief-name span,
+#about .about-title span {
+  color: rgb(225, 0, 225);
+}
+
+#brief-container .brief-description {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+#about {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 50px 0;
+  gap: 20px;
+  top: 0;
+}
+
+#about .about-title {
+  font-family: neoneon;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#about .about-content {
+  text-align: justify;
+  font-size: 20px;
+}
+
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 50px;
+}

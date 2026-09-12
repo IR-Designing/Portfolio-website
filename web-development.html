@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Packaging Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ==============================
+           LOGO GALLERY
+        ============================== */
+
+        .logo-gallery-section {
+            padding: 100px 8%;
+        }
+
+        .logo-gallery-section .main-text {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-gallery-section .main-text span {
+            font-size: 16px;
+        }
+
+        .logo-gallery-section .main-text h2 {
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        .logo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .logo-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .logo-box:hover img {
+            transform: scale(1.08);
+        }
+
+        .logo-overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 25px 20px;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.85)
+            );
+
+            transform: translateY(100%);
+            transition: 0.4s ease;
+        }
+
+        .logo-box:hover .logo-overlay {
+            transform: translateY(0);
+        }
+
+        .logo-overlay h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .logo-overlay p {
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .logo-overlay a {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 20px;
+            background: #fff;
+            color: #111;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .logo-overlay a:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 991px) {
+
+            .logo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logo-box img {
+                height: 280px;
+            }
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .logo-gallery-section {
+                padding: 80px 5%;
+            }
+
+            .logo-gallery-section .main-text h2 {
+                font-size: 30px;
+            }
+
+            .logo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-box img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         LOGO GALLERY
+    ============================== -->
+
+    <section class="logo-gallery-section" id="logo-gallery">
+
+        <div class="main-text">
+            <span>My Creative Work</span>
+            <h2>Packaging Design</h2>
+        </div>
+
+
+        <div class="logo-gallery">
+
+
+            <!-- LOGO 1 -->
+            <div class="logo-box">
+
+                <img src="/Logo Desing/Acc Logo.jpg" alt="Logo Design 1">
+
+                <div class="logo-overlay">
+                    <h3>Brand Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo1.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 2 -->
+            <div class="logo-box">
+
+                <img src="/Logo Desing/Higher-Ground-Hospitility-Logo-Concept-01.png" alt="Logo Design 2">
+
+                <div class="logo-overlay">
+                    <h3>Modern Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo2.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 3 -->
+            <div class="logo-box">
+
+                <img src="/Logo Desing/Higher-Ground-Hospitility-Logo-Concept-02.png" alt="Logo Design 3">
+
+                <div class="logo-overlay">
+                    <h3>Minimal Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo3.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 4 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-4.jpg" alt="Logo Design 4">
+
+                <div class="logo-overlay">
+                    <h3>Corporate Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo4.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 5 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-5.jpg" alt="Logo Design 5">
+
+                <div class="logo-overlay">
+                    <h3>Creative Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo5.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 6 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-6.jpg" alt="Logo Design 6">
+
+                <div class="logo-overlay">
+                    <h3>Luxury Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo6.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 7 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-7.jpg" alt="Logo Design 7">
+
+                <div class="logo-overlay">
+                    <h3>Business Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo7.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 8 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-8.jpg" alt="Logo Design 8">
+
+                <div class="logo-overlay">
+                    <h3>Professional Logo</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo8.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LOGO 9 -->
+            <div class="logo-box">
+
+                <img src="Images/logo-9.jpg" alt="Logo Design 9">
+
+                <div class="logo-overlay">
+                    <h3>Brand Identity</h3>
+                    <p>Logo Design</p>
+
+                    <a href="logo9.html">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
