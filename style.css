@@ -468,7 +468,7 @@ a.btn:nth-child(2) {
     font: 600;
 }
 
-.about-more {
+/* .about-more {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -486,7 +486,7 @@ a.btn:nth-child(2) {
 .about-read-more {
     border: none;
     cursor: pointer;
-}
+} */
 
 /* Services CSS------------------------------------------------------> */
 
@@ -563,20 +563,41 @@ a.btn:nth-child(2) {
     line-height: 1.6;
 }
 
-.more-description {
-    display: none;
+/* About section transition */
+.about-more {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.about-content.active .about-more {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
     margin-top: 1rem;
 }
 
+/* Service section transition */
+.more-description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
 .service-box.active .more-description {
-    display: block;
+    max-height: 300px;
     opacity: 1;
     transform: translateY(0);
     margin-top: 1rem;
 
 }
 
-.read-more-btn {
+.read-more-btn,
+.about-read-more {
     border: none;
     cursor: pointer;
     transform: translateY(-10px);
