@@ -159,6 +159,20 @@ window.onscroll = () => {
   };
 
 
+  //about section--------------------------------------------------------->
+
+    const aboutButton = document.querySelector(".about-read-more");
+    const aboutContent = document.querySelector(".about-content");
+
+    aboutButton.addEventListener("click", () => {
+        aboutContent.classList.toggle("active");
+
+        aboutButton.textContent = aboutContent.classList.contains("active")
+            ? "Read Less"
+            : "Read More";
+    });
+
+
   //Services Section-------------------------------------------------------------->
 document.addEventListener("DOMContentLoaded", function () {
 

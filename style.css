@@ -469,6 +469,20 @@ a.btn:nth-child(2) {
     font: 600;
 }
 
+.about-more {
+    display: none;
+    margin-top: 1rem;
+}
+
+.about-content.active .about-more {
+    display: block;
+}
+
+.about-read-more {
+    border: none;
+    cursor: pointer;
+}
+
 /* Services CSS------------------------------------------------------> */
 
 .main-text {
