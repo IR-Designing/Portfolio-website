@@ -190,9 +190,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Read More / Read Less functionality============================================>
 
 
-    const readMoreButtons = document.querySelectorAll(".read-more-btn");
 
-    readMoreButtons.forEach((button) => {
+    // About Me Read More button
+    const aboutButton = document.querySelector(".about-read-more");
+    const aboutContent = document.querySelector(".about-content");
+
+    if (aboutButton && aboutContent) {
+        aboutButton.addEventListener("click", () => {
+            aboutContent.classList.toggle("active");
+
+            aboutButton.textContent = aboutContent.classList.contains("active")
+                ? "Read Less"
+                : "Read More";
+        });
+    }
+
+    // Services Read More buttons
+    const serviceButtons = document.querySelectorAll(".read-more-btn");
+
+    serviceButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const serviceBox = button.closest(".service-box");
 
