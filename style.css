@@ -573,6 +573,29 @@ a.btn:nth-child(2) {
   cursor: pointer;
 }
 
+/* Smooth Read More animation */
+.about-more,
+.more-description {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    overflow: hidden;
+    transition: grid-template-rows 0.5s ease, opacity 0.4s ease;
+}
+
+.about-more p,
+.more-description p {
+    overflow: hidden;
+    margin: 0;
+}
+
+.about-more.show-more,
+.more-description.show-more {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-top: 15px;
+}
+
 
 /* SKills left CSS------------------------------------------------------> */
 
