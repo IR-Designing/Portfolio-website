@@ -160,19 +160,22 @@ window.addEventListener("scroll",function(){
 
 // toggle icon navbar--------------------------------------------------------->
 
-let menuIcon = document.querySelector("#menu-icon");
-let navList = document.querySelector(".navlist");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector("#menu-icon");
+  const navList = document.querySelector(".navlist");
 
+  if (!menuIcon || !navList) return;
 
-menuIcon.onclick = ()=>{
-  menuIcon.classList.toggle("bx-x");
-  navList.classList.toggle("open");
-}
+  menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("bx-x");
+    navList.classList.toggle("open");
+  });
 
-window.onscroll = () => {
-    menuIcon.classList.remove("bx-x"); // Remove close button class
-    navList.classList.remove("open"); // Remove open class for the navigation list
-  };
+  window.addEventListener("scroll", () => {
+    menuIcon.classList.remove("bx-x");
+    navList.classList.remove("open");
+  });
+});
 
 
   //about section--------------------------------------------------------->
