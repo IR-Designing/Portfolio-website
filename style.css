@@ -865,6 +865,7 @@ a.btn:nth-child(2) {
 
 .contact form textarea {
     resize: none;
+    font-family: "Poppins", sans-serif;
 }
 
 .formBtn {
